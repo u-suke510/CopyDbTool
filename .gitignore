@@ -1,0 +1,10 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/src/CopyDbTool/.vs/CopyDbTool
+/src/CopyDbTool/CopyDbBat/bin/Debug/net6.0
+/src/CopyDbTool/CopyDbBat/obj
+/src/CopyDbTool/CopyDbToolLibs/bin/Debug/net6.0
+/src/CopyDbTool/CopyDbToolLibs/obj
+/src/CopyDbTool/CopyDbWeb/obj
