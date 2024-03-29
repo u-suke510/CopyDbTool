@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using CopyDbToolLibs;
 using CopyDbToolLibs.Services;
+using CopyDbToolLibs.Repositories;
+using CopyDbToolLibs.Configs;
 
 // 処理対象
 List<string> targets = null;
@@ -86,7 +88,12 @@ void Setup()
         option.UseSqlServer(configuration.GetConnectionString("ConnString"));
         option.EnableSensitiveDataLogging();
     });
+    services.AddSingleton<ICopyDbService, CopyDbService>().AddOptions<CopyDbSrvConfig>().Configure<IConfiguration>((x, y) => {
+        y.GetSection("ServiceSettings:B1000").Bind(x);
+    });
     services.AddSingleton<ISampleService, SampleService>();
+    services.AddSingleton<IDstRepository, DstRepository>();
+    services.AddSingleton<ISrcRepository, SrcRepository>();
     provider = services.BuildServiceProvider();
 
     // ロガーの生成
@@ -105,6 +112,8 @@ IServiceBase getService(string target)
     {
         case "B0000":
             return provider.GetService<ISampleService>();
+        case "B1000":
+            return provider.GetService<ICopyDbService>();
         default:
             return null;
     }

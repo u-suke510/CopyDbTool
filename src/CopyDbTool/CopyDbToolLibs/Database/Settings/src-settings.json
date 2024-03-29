@@ -1,0 +1,6 @@
+[
+  {
+    "table": "m_user_src",
+    "columns": [ "user_id", "user_name", "disp_name", "del_flg" ]
+  }
+]

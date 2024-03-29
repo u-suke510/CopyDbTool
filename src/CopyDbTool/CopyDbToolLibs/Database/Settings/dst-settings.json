@@ -1,0 +1,37 @@
+[
+  {
+    "src-table": "m_user_src",
+    "table": "m_user_dst",
+    "columns": [
+      {
+        "name": "user_id",
+        "src": "user_id"
+      },
+      {
+        "name": "user_name",
+        "src": "user_name"
+      },
+      {
+        "name": "disp_name",
+        "src": "disp_name"
+      },
+      {
+        "name": "del_flg",
+        "src": "del_flg"
+      },
+      {
+        "name": "imp_flg",
+        "value": "1"
+      },
+      {
+        "name": "s_ins_ymd",
+        "value": "$ExecDtm"
+      },
+      {
+        "name": "s_ins_usr",
+        "value": "B1000"
+      }
+    ],
+    "keys": [ "user_id" ]
+  }
+]

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-
-namespace CopyDbToolLibs.Resources
-{
+namespace CopyDbToolLibs.Resources {
+    using System;
+    
+    
     /// <summary>
     ///   ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
     /// </summary>
@@ -22,82 +22,88 @@ namespace CopyDbToolLibs.Resources
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class MsgResource
-    {
-
+    public class MsgResource {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal MsgResource()
-        {
+        internal MsgResource() {
         }
-
+        
         /// <summary>
         ///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if (object.ReferenceEquals(resourceMan, null))
-                {
+        public static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CopyDbToolLibs.Resources.MsgResource", typeof(MsgResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        public static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-
+        
+        /// <summary>
+        ///   Params:[{0}]
+        ///SQL:{1} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FmtMsgInfoExecSqlLog {
+            get {
+                return ResourceManager.GetString("FmtMsgInfoExecSqlLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SQL実行ログの出力に失敗しました。
+        ///{0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MsgErrExecSqlLog {
+            get {
+                return ResourceManager.GetString("MsgErrExecSqlLog", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   【{0}】{1}処理が異常終了しました。
         ///{2} に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string MsgExecFailedLog
-        {
-            get
-            {
+        public static string MsgExecFailedLog {
+            get {
                 return ResourceManager.GetString("MsgExecFailedLog", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   【{0}】{1}処理を開始します。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string MsgExecStartLog
-        {
-            get
-            {
+        public static string MsgExecStartLog {
+            get {
                 return ResourceManager.GetString("MsgExecStartLog", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   【{0}】{1}処理が正常に終了しました。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string MsgExecSuccessLog
-        {
-            get
-            {
+        public static string MsgExecSuccessLog {
+            get {
                 return ResourceManager.GetString("MsgExecSuccessLog", resourceCulture);
             }
         }
