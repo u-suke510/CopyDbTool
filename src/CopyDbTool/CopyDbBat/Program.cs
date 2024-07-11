@@ -94,6 +94,9 @@ void Setup()
     services.AddSingleton<IExportDataService, ExportDataService>().AddOptions<ExportDataSrvConfig>().Configure<IConfiguration>((x, y) => {
         y.GetSection("ServiceSettings:B1100").Bind(x);
     });
+    services.AddSingleton<IImportDataService, ImportDataService>().AddOptions<ImportDataSrvConfig>().Configure<IConfiguration>((x, y) => {
+        y.GetSection("ServiceSettings:B1200").Bind(x);
+    });
     services.AddSingleton<ISampleService, SampleService>();
     services.AddSingleton<IDstRepository, DstRepository>();
     services.AddSingleton<ISrcRepository, SrcRepository>();
@@ -119,6 +122,8 @@ IServiceBase getService(string target)
             return provider.GetService<ICopyDbService>();
         case "B1100":
             return provider.GetService<IExportDataService>();
+        case "B1200":
+            return provider.GetService<IImportDataService>();
         default:
             return null;
     }
